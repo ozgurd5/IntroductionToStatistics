@@ -7,14 +7,14 @@ values = [1, 2, 3, 3, 4, 4, 4, 5, 6, 6, 7, 8, 9, 9, 10]
 start = 1
 interval = 2    # Inclusive in both sides:(10-21)(22-34)... is 12
 
-# numpy histogram calculation
+# Bin Number Calculation
 if max(values) % interval == 0:
     bins = int(max(values) / interval)
 else:
     bins = int(max(values) / interval) + 1
+# Bin Number Calculation
 
-counts, bin_edges = np.histogram(values, bins)
-# numpy histogram calculation
+counts, bins_ = np.histogram(values, bins)
 
 class_frequency_table = PrettyTable(["Class", "Frequency"])
 for i in range(len(counts)):

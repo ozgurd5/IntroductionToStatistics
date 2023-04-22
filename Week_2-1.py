@@ -5,16 +5,17 @@ import matplotlib.pyplot as plt
 from prettytable import PrettyTable
 
 values = [80, 40, 40, 50, 30, 40, 60, 30, 100, 60, 70]
-print(f"Sum of values: {sum(values)}")  # ANSWER 1
-values.sort()
-print(f"Sorted values: {values}")   # ANSWER 2
+# ANSWER 1
+print(f"Sum of values: {sum(values)}")
 
-# numpy histogram calculation
+# ANSWER 2
+values.sort()
+print(f"Sorted values: {values}")
+
 single_values = list(set(values))   # single_values are non repetitive values
 single_values.sort()
 single_values.append(max(single_values) + 1)    # only to calculate bin_edges. we won't print that
-counts, bin_edges = np.histogram(values, single_values)
-# numpy histogram calculation
+counts, bins_ = np.histogram(values, single_values)
 
 
 def default_table():
@@ -37,9 +38,9 @@ def pretty_table():
 
 
 # CHOOSE FOR ANSWER 3
-# default_table()
-# pyplot_histogram()
-# pretty_table()
+default_table()
+pyplot_histogram()
+pretty_table()
 
 # ---------- OUTPUTS ----------
 
