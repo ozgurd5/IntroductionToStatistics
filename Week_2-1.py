@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from prettytable import PrettyTable
 
 values = [80, 40, 40, 50, 30, 40, 60, 30, 100, 60, 70]
+
 # ANSWER 1
 print(f"Sum of values: {sum(values)}")
 
@@ -14,8 +15,9 @@ print(f"Sorted values: {values}")
 
 single_values = list(set(values))   # single_values are non repetitive values
 single_values.sort()
-single_values.append(max(single_values) + 1)    # only to calculate bin_edges. we won't print that
+single_values.append(max(single_values) + 1)    # only to calculate bins_ because last bin is inclusive
 counts, bins_ = np.histogram(values, single_values)
+single_values.remove(max(single_values))    # calculation of bins_ is done
 
 
 def default_table():

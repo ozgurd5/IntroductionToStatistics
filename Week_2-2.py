@@ -5,7 +5,7 @@ from prettytable import PrettyTable
 
 values = [1, 2, 3, 3, 4, 4, 4, 5, 6, 6, 7, 8, 9, 9, 10]
 start = 1
-interval = 2    # Inclusive in both sides:(10-21)(22-34)... is 12
+interval = 2    # Inclusive in both sides:[10-21][22-34]... is 12
 
 # Bin Number Calculation
 if max(values) % interval == 0:
