@@ -38,12 +38,6 @@ print(f"Geometric Average = e^({total} / {len(values)}) = {exp(total / len(value
 
 print(st.geometric_mean(values))
 
-# Mode
-print(f"Mode = {st.multimode(values)}")
-
-# Median
-print(f"Median = {st.median(values)}")
-
 # --------- OUTPUTS ----------
 
 # OUTPUT 1
@@ -66,9 +60,3 @@ print(f"Median = {st.median(values)}")
 # OUTPUT 3
 # Geometric Average = e^(10.632773779711947 / 8) = 3.77762959804593
 # 3.77762959804593
-
-# OUTPUT 3
-# Mode = [3]
-
-# OUTPUT 4
-# Median = 3.5

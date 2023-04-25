@@ -1,7 +1,8 @@
-# Average Values of Simple, Grouped and Classed Series
+# Average, Mode and Median of Simple, Grouped and Classed Series
 
 import numpy as np
 from prettytable import PrettyTable
+import statistics as st
 
 # ANSWER 1
 values_1 = [24, 26, 20, 18, 24]
@@ -45,6 +46,26 @@ class_table.add_row(["Total", f"{sum(frequencies)}", "-", f"{total}", "-"])
 
 print(class_table)
 print(f"Average of the classes: {total} / {sum(frequencies)} = {average_3}")
+
+l_mode = list.index(frequencies, max(frequencies)) * 10
+
+if l_mode / 10 == 0:
+    delta_1 = max(frequencies)
+else:
+    delta_1 = max(frequencies) - frequencies[int(l_mode / 10) - 1]
+
+if l_mode / 10 == len(frequencies) - 1:
+    delta_2 = max(frequencies)
+else:
+    delta_2 = max(frequencies) - frequencies[int(l_mode / 10) + 1]
+
+print(f"Mode of the classes: {l_mode} + ({delta_1} / ({delta_1} + {delta_2})) * {10} = {l_mode + (delta_1 / (delta_1 + delta_2)) * 10}")
+
+l_med = int(st.median(range(50)) / 10) * 10
+f_1 = np.cumsum(frequencies)[int(l_med / 10) - 1]
+f_med = frequencies[int(l_med / 10)]
+
+print(f"Median of the classes: {l_med} + ( ( ({sum(frequencies)} / 2) - {f_1} ) / {f_med} ) * 10 = {l_med + (((sum(frequencies) / 2) - f_1) / f_med) * 10}")
 
 # --------- OUTPUTS ----------
 
