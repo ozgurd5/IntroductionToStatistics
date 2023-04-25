@@ -96,3 +96,5 @@ print(f"Median of the classes: {l_med} + ( ( ({sum(frequencies)} / 2) - {f_1} ) 
 # |  Total   |     25    |    -     |         365          |          -           |
 # +----------+-----------+----------+----------------------+----------------------+
 # Average of the classes: 365 / 25 = 14.6
+# Mode of the classes: 0 + (12 / (12 + 6)) * 10 = 6.666666666666666
+# Median of the classes: 20 + ( ( (25 / 2) - 18 ) / 4 ) * 10 = 6.25

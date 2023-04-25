@@ -26,6 +26,7 @@ values = [12, 4, 3, 3, 4, 3, 1, 8]
 total = 0
 for i in range(len(values)):
     total += 1 / values[i]
+print(values)
 print(f"Harmonic Average = {len(values)} / {total} = {len(values) / total}")
 
 print(st.harmonic_mean(values))
@@ -34,6 +35,7 @@ print(st.harmonic_mean(values))
 total = 0
 for i in values:
     total += log(i)
+print(values)
 print(f"Geometric Average = e^({total} / {len(values)}) = {exp(total / len(values))}")
 
 print(st.geometric_mean(values))
@@ -54,9 +56,11 @@ print(st.geometric_mean(values))
 # 73.0
 
 # OUTPUT 2
+# [12, 4, 3, 3, 4, 3, 1, 8]
 # Harmonic Average = 8 / 2.708333333333333 = 2.953846153846154
 # 2.953846153846154
 
 # OUTPUT 3
+# [12, 4, 3, 3, 4, 3, 1, 8]
 # Geometric Average = e^(10.632773779711947 / 8) = 3.77762959804593
 # 3.77762959804593
