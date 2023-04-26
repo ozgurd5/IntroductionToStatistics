@@ -52,20 +52,20 @@ l_mode = list.index(frequencies, max(frequencies)) * 10
 if l_mode / 10 == 0:
     delta_1 = max(frequencies)
 else:
-    delta_1 = max(frequencies) - frequencies[int(l_mode / 10) - 1]
+    delta_1 = max(frequencies) - frequencies[list.index(frequencies, max(frequencies)) - 1]
 
 if l_mode / 10 == len(frequencies) - 1:
     delta_2 = max(frequencies)
 else:
-    delta_2 = max(frequencies) - frequencies[int(l_mode / 10) + 1]
+    delta_2 = max(frequencies) - frequencies[list.index(frequencies, max(frequencies)) + 1]
 
 print(f"Mode of the classes: {l_mode} + ({delta_1} / ({delta_1} + {delta_2})) * {10} = {l_mode + (delta_1 / (delta_1 + delta_2)) * 10}")
 
-l_med = int(st.median(range(50)) / 10) * 10
-f_1 = np.cumsum(frequencies)[int(l_med / 10) - 1]
-f_med = frequencies[int(l_med / 10)]
+l_median = int(st.median(range(50)) / 10) * 10
+f_1 = np.cumsum(frequencies)[int(l_median / 10) - 1]
+f_med = frequencies[int(l_median / 10)]
 
-print(f"Median of the classes: {l_med} + ( ( ({sum(frequencies)} / 2) - {f_1} ) / {f_med} ) * 10 = {l_med + (((sum(frequencies) / 2) - f_1) / f_med) * 10}")
+print(f"Median of the classes: {l_median} + ( ( ({sum(frequencies)} / 2) - {f_1} ) / {f_med} ) * 10 = {l_median + (((sum(frequencies) / 2) - f_1) / f_med) * 10}")
 
 # --------- OUTPUTS ----------
 
