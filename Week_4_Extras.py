@@ -1,4 +1,4 @@
-# Weighted Average, Harmonic Average, Geometric Average, Mode, Median
+# Weighted Average, Harmonic Average, Geometric Average
 
 from prettytable import PrettyTable
 from math import log, exp
